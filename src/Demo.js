@@ -98,7 +98,7 @@ export default function Demo() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>My account can</MenuItem>
     </Menu>
   );
 
@@ -173,7 +173,7 @@ export default function Demo() {
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            MUI
+            MUI...
           </Typography>
           <Search>
             <SearchIconWrapper>

@@ -173,7 +173,7 @@ export default function Demo() {
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            MUI...
+            MUI......
           </Typography>
           <Search>
             <SearchIconWrapper>

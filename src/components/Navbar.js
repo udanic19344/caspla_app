@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import Divider from "@mui/material/Divider";
 import Tooltip from "@mui/material/Tooltip";
 import Avatar from "@mui/material/Avatar";
 
@@ -16,12 +15,16 @@ export default function Navbar() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <div>
       <AppBar
         position="static"
-        style={{ backgroundColor: "white", alignItems: "end" }}
+        style={{
+          boxShadow: "none",
+          backgroundColor: "white",
+          alignItems: "end",
+        }}
       >
-        <Toolbar>
+        <Toolbar style={{ display: "flex" }}>
           <Button style={{ color: "black" }} variant="h6">
             Logout
           </Button>
@@ -34,7 +37,7 @@ export default function Navbar() {
           </Box>
         </Toolbar>
       </AppBar>
-      <Divider />
-    </Box>
+      <hr style={{ margin: 0 }} />
+    </div>
   );
 }

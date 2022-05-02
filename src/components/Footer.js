@@ -2,42 +2,53 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Typography } from "@mui/material";
+import Paper from "@mui/material/Paper";
 
 export default function Footer() {
   return (
-    <Box sx={{ width: "100%", height: 170, backgroundColor: "#a167c9" }}>
-      <Grid container marginLeft={10} direction={"row"} spacing={2}>
-        <Grid item>
-          <Typography variant="h5" color="#FFFFFF">
-            Main
-          </Typography>
-        </Grid>
-        <Grid item>
-          <Typography variant="h5" color="#FFFFFF">
-            Main
-          </Typography>
-        </Grid>
-      </Grid>
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        alignItems="left"
-        justifyContent="left"
-        marginLeft={10}
+    <Paper sx={{ bottom: 0, left: 0, right: 0 }}>
+      <Box
+        sx={{
+          width: "100%",
+          height: 170,
+          backgroundColor: "#815296",
+          marginTop: 20,
+        }}
       >
-        <Box
-          component="img"
-          align="left"
-          sx={{
-            marginTop: 2,
-            height: 50,
-            width: 100,
-          }}
-          alt="Caspla"
-          src="/CasplaApp.png"
-        />
-      </Grid>
-    </Box>
+        <Grid container direction={"row"} spacing={2}>
+          <Grid item>
+            <Typography marginLeft={10} variant="h5" color="#FFFFFF">
+              Main
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography marginLeft={10} variant="h5" color="#FFFFFF">
+              Main
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="left"
+          justifyContent="left"
+          // marginLeft={10}
+        >
+          <Box
+            component="img"
+            align="left"
+            marginLeft={10}
+            sx={{
+              marginTop: 2,
+              height: 50,
+              width: 100,
+            }}
+            alt="Caspla"
+            src="/CasplaApp.png"
+          />
+        </Grid>
+      </Box>
+    </Paper>
   );
 }

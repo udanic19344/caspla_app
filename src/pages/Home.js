@@ -9,6 +9,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import Footer from "../components/Footer";
+import Paper from "@mui/material/Paper";
 
 const Search = styled("div")(({ theme }) => ({
   alignItems: "center",
@@ -125,6 +127,9 @@ const Home = () => {
             </Typography>
           </CardContent>
         </Card>
+        <Paper sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}>
+          <Footer />
+        </Paper>
       </Grid>
     </div>
   );

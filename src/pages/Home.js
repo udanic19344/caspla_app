@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
@@ -10,25 +10,28 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Footer from "../components/Footer";
+import HelpCenterOutlinedIcon from "@mui/icons-material/HelpCenterOutlined";
 
 const Search = styled("div")(({ theme }) => ({
   alignItems: "center",
   borderRadius: 20,
   backgroundColor: "#E8E9EB",
-  width: 700,
+  width: 500,
 }));
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
+  marginLeft: "15px",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    // paddingLeft: `calc(5px + ${theme.spacing(2)})`,
+    // paddingRight: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
 
     [theme.breakpoints.up("sm")]: {
-      width: "10ch",
+      width: "45ch",
       "&:focus": {
-        width: "40ch",
+        width: "45ch",
       },
     },
   },
@@ -43,6 +46,26 @@ const bull = (
 );
 
 const Home = () => {
+  const [button1Color, setButton1Color] = useState(true);
+  const [button2Color, setButton2Color] = useState(false);
+  const [button3Color, setButton3Color] = useState(false);
+
+  function changeButton1Color() {
+    setButton1Color(true);
+    setButton2Color(false);
+    setButton3Color(false);
+  }
+  function changeButton2Color() {
+    setButton1Color(false);
+    setButton2Color(true);
+    setButton3Color(false);
+  }
+  function changeButton3Color() {
+    setButton1Color(false);
+    setButton2Color(false);
+    setButton3Color(true);
+  }
+
   return (
     <div>
       <Navbar />
@@ -65,34 +88,47 @@ const Home = () => {
           src="/CasplaApp.png"
         />
         <Search alignItems="center">
-          <StyledInputBase
-            placeholder="Search…"
-            inputProps={{ "aria-label": "search" }}
-          />
+          <StyledInputBase inputProps={{ "aria-label": "search" }} />
+          <HelpCenterOutlinedIcon style={{ marginRight: "10px" }} />
         </Search>
         <div>
           <Stack spacing={1} alignItems="center" marginTop="40px">
             <Stack direction="row" spacing={4} alignItems="center">
               <Chip
-                label="Clickable Link"
+                style={{
+                  backgroundColor: button1Color ? "#3F4D5F" : "#E6E8EA",
+                  color: button1Color ? "#FFFFFF" : "#000000",
+                }}
+                label="Talents"
                 component="a"
                 href="#basic-chip"
                 variant="outlined"
                 clickable
+                onClick={() => changeButton1Color()}
               />
               <Chip
-                label="Clickable Link"
+                style={{
+                  backgroundColor: button2Color ? "#3F4D5F" : "#E6E8EA",
+                  color: button2Color ? "#FFFFFF" : "#000000",
+                }}
+                label="Production"
                 component="a"
                 href="#basic-chip"
                 variant="outlined"
                 clickable
+                onClick={() => changeButton2Color()}
               />
               <Chip
-                label="Clickable Link"
+                style={{
+                  backgroundColor: button3Color ? "#3F4D5F" : "#E6E8EA",
+                  color: button3Color ? "#FFFFFF" : "#000000",
+                }}
+                label="Link 3"
                 component="a"
                 href="#basic-chip"
                 variant="outlined"
                 clickable
+                onClick={() => changeButton3Color()}
               />
             </Stack>
           </Stack>

@@ -1,65 +1,149 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import { Typography } from "@mui/material";
-import Paper from "@mui/material/Paper";
+import HelpCenterOutlinedIcon from "@mui/icons-material/HelpCenterOutlined";
 
 export default function Footer() {
   return (
-    <Paper sx={{ bottom: 0, left: 0, right: 0 }}>
-      <Box
-        sx={{
-          width: "100%",
-          height: 170,
-          backgroundColor: "#815296",
-          marginTop: 30,
+    <div
+      style={{
+        display: "flex",
+        width: "100%",
+        marginTop: "6%",
+        backgroundColor: "#815296",
+        flexDirection: "column",
+        padding: "3% 8% 0% 8%",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
         }}
       >
-        <Grid container direction={"row"} spacing={2}>
-          <Grid item>
-            <Typography marginLeft={10} variant="h5" color="#FFFFFF">
-              <a href="/" style={{ color: "#FFFFFF" }}>
-                Main
-              </a>
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography marginLeft={10} variant="h5" color="#FFFFFF">
-              <a href="/searchTalentsResults" style={{ color: "#FFFFFF" }}>
-                SearchTalentsResults
-              </a>
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          spacing={0}
-          direction="column"
-          alignItems="left"
-          justifyContent="left"
-          // marginLeft={10}
+        <a
+          href="/"
+          style={{
+            color: "#FFFFFF",
+            textDecoration: "none",
+            padding: "0% 3% 0% 0%",
+          }}
         >
-          <Box
-            component="img"
-            align="left"
-            marginLeft={10}
-            sx={{
-              marginTop: 2,
-              height: 50,
-              width: 100,
-            }}
+          Main
+        </a>
+
+        <a
+          href="/"
+          style={{
+            color: "#FFFFFF",
+            textDecoration: "none",
+            padding: "0% 3% 0% 0%",
+          }}
+        >
+          Main
+        </a>
+
+        <a
+          href="/"
+          style={{
+            color: "#FFFFFF",
+            textDecoration: "none",
+            padding: "0% 3% 0% 0%",
+          }}
+        >
+          Main
+        </a>
+
+        <a
+          href="/"
+          style={{
+            color: "#FFFFFF",
+            textDecoration: "none",
+            padding: "0% 3% 0% 0%",
+          }}
+        >
+          Main
+        </a>
+
+        <a
+          href="/"
+          style={{
+            color: "#FFFFFF",
+            textDecoration: "none",
+            padding: "0% 3% 0% 0%",
+          }}
+        >
+          Main
+        </a>
+
+        <a
+          href="/"
+          style={{
+            color: "#FFFFFF",
+            textDecoration: "none",
+            padding: "0% 3% 0% 0%",
+          }}
+        >
+          Main
+        </a>
+
+        <a
+          href="/"
+          style={{
+            color: "#FFFFFF",
+            textDecoration: "none",
+            padding: "0% 3% 0% 0%",
+          }}
+        >
+          Main
+        </a>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          margin: "3% 0% ",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <img
             alt="Caspla"
             src="/CasplaApp.png"
-          />
+            style={{ width: "30%", margin: "0% 3% 0% 0%" }}
+          ></img>
           <p
             style={{
               color: "#FFFFFF",
+              margin: "0px",
             }}
           >
             @ {new Date().getFullYear()} Caspla
           </p>
-        </Grid>
-      </Box>
-    </Paper>
+        </div>
+        <div>
+          <HelpCenterOutlinedIcon
+            style={{
+              marginRight: "10px",
+              color: "#FFFFFF",
+            }}
+          />
+          <HelpCenterOutlinedIcon
+            style={{
+              marginRight: "10px",
+              color: "#FFFFFF",
+            }}
+          />
+          <HelpCenterOutlinedIcon
+            style={{
+              marginRight: "10px",
+              color: "#FFFFFF",
+            }}
+          />
+        </div>
+      </div>
+    </div>
   );
 }

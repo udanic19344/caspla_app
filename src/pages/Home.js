@@ -59,7 +59,7 @@ const Home = () => {
         alignItems="center"
         justifyContent="center"
         style={{
-          height: "54vh",
+          // height: "54vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -307,7 +307,7 @@ const Home = () => {
                   <Tag tagName={"male"} />
                 </div>
               </div> */}
-              <div style={{ margin: "10px" }}>
+              <div>
                 <div>
                   <p style={{ textAlign: "left" }}>Category</p>
                   <Divider

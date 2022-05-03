@@ -12,18 +12,22 @@ export default function Footer() {
           width: "100%",
           height: 170,
           backgroundColor: "#815296",
-          marginTop: 20,
+          marginTop: 30,
         }}
       >
         <Grid container direction={"row"} spacing={2}>
           <Grid item>
             <Typography marginLeft={10} variant="h5" color="#FFFFFF">
-              <a href="/">Main</a>
+              <a href="/" style={{ color: "#FFFFFF" }}>
+                Main
+              </a>
             </Typography>
           </Grid>
           <Grid item>
             <Typography marginLeft={10} variant="h5" color="#FFFFFF">
-              <a href="/searchTalentsResults">SearchTalentsResults</a>
+              <a href="/searchTalentsResults" style={{ color: "#FFFFFF" }}>
+                SearchTalentsResults
+              </a>
             </Typography>
           </Grid>
         </Grid>

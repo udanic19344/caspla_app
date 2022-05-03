@@ -8,6 +8,8 @@ const Tag = (props) => {
           backgroundColor: "#E6E8EA",
           padding: "0 10px",
           borderRadius: "2px",
+          marginLeft: "2px",
+          marginRight: "2px",
         }}
       >
         <a href="#" style={{ textDecoration: "none", color: "#3F4D5F" }}>

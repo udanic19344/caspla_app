@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Footer from "../components/Footer";
 import HelpCenterOutlinedIcon from "@mui/icons-material/HelpCenterOutlined";
+import Tag from "../components/Tag";
 
 const Search = styled("div")(({ theme }) => ({
   alignItems: "center",
@@ -79,7 +80,7 @@ const Home = () => {
         direction="column"
         alignItems="center"
         justifyContent="center"
-        hegiht="100vh"
+        height="100vh"
       >
         <Box
           component="img"
@@ -138,7 +139,7 @@ const Home = () => {
           </Stack>
         </div>
 
-        <Card
+        {/* <Card
           style={{
             width: "900px",
             height: "500",
@@ -146,27 +147,47 @@ const Home = () => {
             marginTop: 20,
           }}
         >
-          <CardContent>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              Caspla
-            </Typography>
-            <Typography variant="h5" component="div">
-              be{bull}nev{bull}o{bull}lent
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              adjective
-            </Typography>
-            <Typography variant="body2">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
-            </Typography>
+          <CardContent style={{ position: "relative" }}>
+            <p style={{ position: "absolute", top: "-10px" }}>絞り込み条件</p>
           </CardContent>
-        </Card>
+        </Card> */}
+        <div
+          style={{
+            backgroundColor: "#F2F3F5",
+            minWidth: "300px",
+            minHeight: "100px",
+            position: "relative",
+            marginTop: "50px",
+          }}
+        >
+          <p style={{ position: "absolute", top: "-13px", left: "10px" }}>
+            絞り込み条件
+          </p>
+
+          <Grid container spacing={2} style={{ marginTop: "5px" }}>
+            <Grid item xs={2}>
+              <p>Gender</p>
+              <Tag tagName={"Male"} />
+              <Tag tagName={"Female"} />
+            </Grid>
+            <Grid item xs={4}>
+              <p>Age</p>
+              <Tag tagName={"20"} />
+              <Tag tagName={"30"} />
+              <Tag tagName={"40"} />
+              <Tag tagName={"50"} />
+            </Grid>
+            <Grid item xs={6}>
+              <p>Category</p>
+              <Tag tagName={"Male"} />
+              <Tag tagName={"Female"} />
+              <Tag tagName={"Male"} />
+              <Tag tagName={"Female"} />
+              <Tag tagName={"Male"} />
+              <Tag tagName={"Female"} />
+            </Grid>
+          </Grid>
+        </div>
       </Grid>
       <Footer />
     </div>

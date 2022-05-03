@@ -51,6 +51,13 @@ export default function Footer() {
             alt="Caspla"
             src="/CasplaApp.png"
           />
+          <p
+            style={{
+              color: "#FFFFFF",
+            }}
+          >
+            @ {new Date().getFullYear()} Caspla
+          </p>
         </Grid>
       </Box>
     </Paper>

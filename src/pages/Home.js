@@ -66,6 +66,10 @@ const Home = () => {
     setButton3Color(true);
   }
 
+  const getSearchData = (e) => {
+    console.log(e);
+  };
+
   return (
     <div>
       <Navbar />
@@ -87,7 +91,7 @@ const Home = () => {
           alt="Caspla"
           src="/CasplaApp.png"
         />
-        <Search alignItems="center">
+        <Search alignItems="center" onKeyDown={getSearchData}>
           <StyledInputBase inputProps={{ "aria-label": "search" }} />
           <HelpCenterOutlinedIcon style={{ marginRight: "10px" }} />
         </Search>

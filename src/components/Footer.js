@@ -18,12 +18,12 @@ export default function Footer() {
         <Grid container direction={"row"} spacing={2}>
           <Grid item>
             <Typography marginLeft={10} variant="h5" color="#FFFFFF">
-              Main
+              <a href="/">Main</a>
             </Typography>
           </Grid>
           <Grid item>
             <Typography marginLeft={10} variant="h5" color="#FFFFFF">
-              Main
+              <a href="/searchTalentsResults">SearchTalentsResults</a>
             </Typography>
           </Grid>
         </Grid>

@@ -5,9 +5,9 @@ const Tag = (props) => {
         className="btn"
         style={{
           backgroundColor: "#E6E8EA",
-          padding: "0 10px",
-          borderRadius: "2px",
-          margin: "2px",
+          padding: "5px 10px",
+          borderRadius: "7px",
+          margin: "2px 6px",
         }}
       >
         <a

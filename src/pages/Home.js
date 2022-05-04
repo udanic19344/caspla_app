@@ -78,14 +78,21 @@ const Home = () => {
           <img
             alt="Caspla"
             src="/Caspla.png"
-            // style={{ width: "500px", height: "100px" }}
+            style={{ width: "500px", height: "100px" }}
           />
           {showTalents === true && (
-            <p
-              style={{ marginBottom: "8px", fontSize: "17px", fontWeight: 500 }}
-            >
-              Talents
-            </p>
+            <b>
+              <p
+                style={{
+                  marginBottom: "8px",
+                  fontSize: "17px",
+                  fontWeight: 700,
+                  color: "#815296",
+                }}
+              >
+                Talents
+              </p>
+            </b>
           )}
 
           {showProduction === true && (

@@ -61,6 +61,7 @@ export default function Navbar() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                flexDirection: "column",
               }}
             >
               <HelpCenterOutlinedIcon
@@ -74,7 +75,7 @@ export default function Navbar() {
                   fontSize: "10px",
                 }}
               >
-                アイド
+                ログイン
               </div>
             </div>
           </a>

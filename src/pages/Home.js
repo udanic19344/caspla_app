@@ -66,14 +66,36 @@ const Home = () => {
           flexWrap: "nowrap",
         }}
       >
-        <Box
-          component="img"
-          sx={{
-            marginTop: "15vh",
+        <div
+          style={{
+            marginTop: "8vh",
+            width: "23%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-end",
           }}
-          alt="Caspla"
-          src="/Caspla.png"
-        />
+        >
+          <img
+            alt="Caspla"
+            src="/Caspla.png"
+            // style={{ width: "500px", height: "100px" }}
+          />
+          {showTalents === true && (
+            <p
+              style={{ marginBottom: "8px", fontSize: "17px", fontWeight: 500 }}
+            >
+              Talents
+            </p>
+          )}
+
+          {showProduction === true && (
+            <p
+              style={{ marginBottom: "8px", fontSize: "17px", fontWeight: 500 }}
+            >
+              Productions
+            </p>
+          )}
+        </div>
         <div
           style={{
             marginTop: "4%",
@@ -82,7 +104,7 @@ const Home = () => {
             alignItems: "center",
             flexDirection: "row",
             justifyContent: "center",
-            width: "45%",
+            width: "47%",
             minWidth: "275px",
           }}
         >
@@ -102,6 +124,7 @@ const Home = () => {
               backgroundColor: "#F2F3F5",
               boxShadow: "none",
               border: "none",
+              padding: "17px",
             }}
           ></input>
           <HelpCenterOutlinedIcon
@@ -120,9 +143,12 @@ const Home = () => {
                 style={{
                   backgroundColor: button1Color ? "#3F4D5F" : "#E6E8EA",
                   color: button1Color ? "#FFFFFF" : "#000000",
-                  width: "130px",
+                  width: "165px",
+                  height: "37px",
+                  borderRadius: "20px",
+                  border: "none",
                 }}
-                label="才能"
+                label="タレント検索"
                 component="a"
                 href="#basic-chip"
                 variant="outlined"
@@ -133,9 +159,12 @@ const Home = () => {
                 style={{
                   backgroundColor: button2Color ? "#3F4D5F" : "#E6E8EA",
                   color: button2Color ? "#FFFFFF" : "#000000",
-                  width: "130px",
+                  width: "165px",
+                  height: "37px",
+                  borderRadius: "20px",
+                  border: "none",
                 }}
-                label="製造"
+                label="プロダクション検索"
                 component="a"
                 href="#basic-chip"
                 variant="outlined"
@@ -146,9 +175,12 @@ const Home = () => {
                 style={{
                   backgroundColor: button3Color ? "#3F4D5F" : "#E6E8EA",
                   color: button3Color ? "#FFFFFF" : "#000000",
-                  width: "130px",
+                  width: "165px",
+                  height: "37px",
+                  borderRadius: "20px",
+                  border: "none",
                 }}
-                label="Link 3"
+                label="オーディション検索"
                 component="a"
                 href="#basic-chip"
                 variant="outlined"
@@ -170,16 +202,33 @@ const Home = () => {
               borderRadius: "5px",
             }}
           >
-            <p style={{ position: "absolute", top: "-13px", left: "10px" }}>
-              絞り込み条件
-            </p>
+            <b>
+              <p
+                style={{
+                  position: "absolute",
+                  top: "-13px",
+                  left: "27px",
+                  color: "#3F4D5F",
+                }}
+              >
+                絞り込み条件
+              </p>
+            </b>
 
             <div style={{ display: "flex" }}>
-              <div style={{ margin: "10px" }}>
-                <p style={{ textAlign: "left" }}>性別</p>
+              <div style={{ margin: "15px" }}>
+                <p
+                  style={{
+                    textAlign: "left",
+                    color: "#AAAAAA",
+                    fontSize: "12px",
+                  }}
+                >
+                  性別
+                </p>
                 <Divider
                   variant="inset"
-                  style={{ bottom: "27%", position: "relative", left: "0" }}
+                  style={{ top: "10px", position: "relative", left: "5" }}
                 />
                 <div
                   style={{
@@ -191,13 +240,21 @@ const Home = () => {
                   <Tag
                     onClick={() => maleTagStateChange()}
                     state={male}
-                    tagName={"male"}
+                    tagName={"男性"}
                   />
-                  <Tag tagName={"female"} />
+                  <Tag tagName={"女性"} />
                 </div>
               </div>
               <div style={{ margin: "10px" }}>
-                <p style={{ textAlign: "left" }}>Age</p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    color: "#AAAAAA",
+                    fontSize: "12px",
+                  }}
+                >
+                  年齢
+                </p>
                 <Divider
                   variant="inset"
                   style={{ bottom: "27%", position: "relative", left: "0" }}
@@ -209,17 +266,25 @@ const Home = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
+                  <Tag tagName={"10歳未満"} />
+                  <Tag tagName={"10代"} />
+                  <Tag tagName={"20代"} />
+                  <Tag tagName={"3O代"} />
+                  <Tag tagName={"40代"} />
+                  <Tag tagName={"50代"} />
+                  <Tag tagName={"60歳以上"} />
                 </div>
               </div>
-              <div style={{ margin: "10px" }}>
-                <p style={{ textAlign: "left" }}>Category</p>
+              <div style={{ margin: "15px" }}>
+                <p
+                  style={{
+                    textAlign: "left",
+                    color: "#AAAAAA",
+                    fontSize: "12px",
+                  }}
+                >
+                  活動区分
+                </p>
                 <Divider
                   variant="inset"
                   style={{ bottom: "27%", position: "relative", left: "0" }}
@@ -231,18 +296,23 @@ const Home = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"fedcdsdvsdvmale"} />
+                  <Tag tagName={"俳優・女優"} />
+                  <Tag tagName={"芸人"} />
+                  <Tag tagName={"モデル"} />
+                  <Tag tagName={"子役"} />
+                  <Tag tagName={"ミュージシャン"} />
+                  <Tag tagName={"ル"} />
+                  <Tag tagName={"グラビアアイドル"} />
+                  <Tag tagName={"声優"} />
+                  <Tag tagName={"ナレーター"} />
+                  <Tag tagName={"司会・MC・リポーター"} />
+                  <Tag tagName={"文化人・専門家"} />
+                  <Tag tagName={"ダンサー"} />
+                  <Tag tagName={"コンパニオン"} />
+                  <Tag tagName={"パーツモデル"} />
+                  <Tag tagName={"スポーツ選手"} />
+                  <Tag tagName={"インフルエンサー"} />
+                  <Tag tagName={"その他"} />
                 </div>
               </div>
             </div>
@@ -261,56 +331,34 @@ const Home = () => {
               borderRadius: "5px",
             }}
           >
-            <p style={{ position: "absolute", top: "-13px", left: "10px" }}>
-              絞り込み条件
-            </p>
+            <b>
+              <p
+                style={{
+                  position: "absolute",
+                  top: "-13px",
+                  left: "27px",
+                  color: "#3F4D5F",
+                }}
+              >
+                絞り込み条件
+              </p>
+            </b>
 
             <div style={{ display: "flex" }}>
-              {/* <div style={{ margin: "10px" }}>
-                <p style={{ textAlign: "left" }}>性別</p>
-                <Divider
-                  variant="inset"
-                  style={{ bottom: "27%", position: "relative", left: "0" }}
-                />
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                  }}
-                >
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                </div>
-              </div> */}
-              {/* <div style={{ margin: "10px" }}>
-                <p style={{ textAlign: "left" }}>Age</p>
-                <Divider
-                  variant="inset"
-                  style={{ bottom: "27%", position: "relative", left: "0" }}
-                />
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                </div>
-              </div> */}
               <div>
                 <div>
-                  <p style={{ textAlign: "left" }}>Category</p>
+                  <p
+                    style={{
+                      textAlign: "left",
+                      color: "#AAAAAA",
+                      fontSize: "12px",
+                    }}
+                  >
+                    ャンル
+                  </p>
                   <Divider
                     variant="inset"
-                    style={{ top: "-26%", position: "relative", left: "0" }}
+                    style={{ bottom: "26%", position: "relative", left: "0" }}
                   />
                 </div>
                 <div
@@ -320,30 +368,22 @@ const Home = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
-                  <Tag tagName={"male"} />
-                  <Tag tagName={"female"} />
+                  <Tag tagName={"タレント"} />
+                  <Tag tagName={"俳優・女優 "} />
+                  <Tag tagName={"芸人"} />
+                  <Tag tagName={"モデル"} />
+                  <Tag tagName={"子役"} />
+                  <Tag tagName={"ミュージシャン"} />
+                  <Tag tagName={"アイドル"} />
+                  <Tag tagName={"グラビアアイドル"} />
+                  <Tag tagName={"シミア"} />
+                  <Tag tagName={"声優"} />
+                  <Tag tagName={"アナラン手ー"} />
+                  <Tag tagName={"文化人"} />
+                  <Tag tagName={"スポーツ選手"} />
+                  <Tag tagName={"外国人"} />
+                  <Tag tagName={"スエキストラ"} />
+                  <Tag tagName={"動物"} />
                 </div>
               </div>
             </div>

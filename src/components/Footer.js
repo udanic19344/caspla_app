@@ -26,7 +26,7 @@ export default function Footer() {
             padding: "0% 3% 0% 0%",
           }}
         >
-          Main
+          CASPLAとは
         </a>
 
         <a
@@ -37,7 +37,7 @@ export default function Footer() {
             padding: "0% 3% 0% 0%",
           }}
         >
-          Main
+          利用規約
         </a>
 
         <a
@@ -48,7 +48,7 @@ export default function Footer() {
             padding: "0% 3% 0% 0%",
           }}
         >
-          Main
+          プライバシーポリシー
         </a>
 
         <a
@@ -59,7 +59,7 @@ export default function Footer() {
             padding: "0% 3% 0% 0%",
           }}
         >
-          Main
+          情報セキュリティ方針
         </a>
 
         <a
@@ -70,7 +70,7 @@ export default function Footer() {
             padding: "0% 3% 0% 0%",
           }}
         >
-          Main
+          反社基本方針
         </a>
 
         <a
@@ -81,7 +81,7 @@ export default function Footer() {
             padding: "0% 3% 0% 0%",
           }}
         >
-          Main
+          ヘルプ
         </a>
 
         <a
@@ -92,7 +92,7 @@ export default function Footer() {
             padding: "0% 3% 0% 0%",
           }}
         >
-          Main
+          お問い合わせ
         </a>
       </div>
       <div
@@ -112,7 +112,7 @@ export default function Footer() {
           <img
             alt="Caspla"
             src="/CasplaFooter.png"
-            style={{ width: "30%", margin: "0% 3% 0% 0%" }}
+            style={{ width: "30%", margin: "0% 3% 0% 0%", width: "50%" }}
           ></img>
           <p
             style={{

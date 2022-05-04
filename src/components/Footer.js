@@ -30,7 +30,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="/"
+          href="/SearchTalentsResults"
           style={{
             color: "#FFFFFF",
             textDecoration: "none",
@@ -111,7 +111,7 @@ export default function Footer() {
         >
           <img
             alt="Caspla"
-            src="/CasplaApp.png"
+            src="/CasplaFooter.png"
             style={{ width: "30%", margin: "0% 3% 0% 0%" }}
           ></img>
           <p

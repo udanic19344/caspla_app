@@ -70,11 +70,9 @@ const Home = () => {
           component="img"
           sx={{
             marginTop: "15vh",
-            height: 100,
-            width: 200,
           }}
           alt="Caspla"
-          src="/CasplaApp.png"
+          src="/Caspla.png"
         />
         <div
           style={{
@@ -124,7 +122,7 @@ const Home = () => {
                   color: button1Color ? "#FFFFFF" : "#000000",
                   width: "130px",
                 }}
-                label="Talents"
+                label="才能"
                 component="a"
                 href="#basic-chip"
                 variant="outlined"
@@ -137,7 +135,7 @@ const Home = () => {
                   color: button2Color ? "#FFFFFF" : "#000000",
                   width: "130px",
                 }}
-                label="Production"
+                label="製造"
                 component="a"
                 href="#basic-chip"
                 variant="outlined"
